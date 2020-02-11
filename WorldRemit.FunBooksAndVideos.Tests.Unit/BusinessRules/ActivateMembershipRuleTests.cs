@@ -37,7 +37,7 @@ namespace WorldRemit.FunBooksAndVideos.Tests.Unit.BusinessRules
             };
 
             //act      
-            await _activateMembershipRule.Apply(order);
+            await _activateMembershipRule.ApplyAsync(order);
 
             //assert
             _mockCustomerAccountService.Verify(x => x.ActivateMembership(3, 10), Times.Never());
@@ -62,7 +62,7 @@ namespace WorldRemit.FunBooksAndVideos.Tests.Unit.BusinessRules
             };
 
             //act      
-            await _activateMembershipRule.Apply(order);
+            await _activateMembershipRule.ApplyAsync(order);
 
             //assert
             _mockCustomerAccountService.Verify(x => x.ActivateMembership(It.IsAny<int>(), It.IsAny<int>()), Times.Never());

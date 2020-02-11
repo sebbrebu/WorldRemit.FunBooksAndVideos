@@ -19,7 +19,7 @@ namespace WorldRemit.FunBooksAndVideos.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Process(PurchaseOrder order)
         {
-            await _orderService.ProcessOrder(order);
+            await _orderService.ProcessAsync(order);
 
             return Ok();
         }

@@ -14,7 +14,7 @@ namespace WorldRemit.FunBooksAndVideos.Api.BusinessRules
             _customerAccountService = customerAccountService;
         }
 
-        public async Task Apply(PurchaseOrder order)
+        public async Task ApplyAsync(PurchaseOrder order)
         {
             var mermberships = order.Items.Where(i => i.Type == ItemType.Membership);
 

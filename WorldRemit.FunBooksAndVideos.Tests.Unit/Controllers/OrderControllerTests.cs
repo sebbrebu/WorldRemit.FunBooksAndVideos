@@ -58,7 +58,7 @@ namespace WorldRemit.FunBooksAndVideos.Tests.Unit.Controllers
             await _orderController.Process(order);
 
             //assert
-            _mockOrderService.Verify(x => x.ProcessOrder(order), Times.Once);
+            _mockOrderService.Verify(x => x.ProcessAsync(order), Times.Once);
         }
     }
 }

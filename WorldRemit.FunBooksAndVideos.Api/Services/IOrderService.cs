@@ -5,6 +5,6 @@ namespace WorldRemit.FunBooksAndVideos.Api.Services
 {
     public interface IOrderService
     {
-        Task ProcessOrder(PurchaseOrder order);
+        Task ProcessAsync(PurchaseOrder order);
     }
 }

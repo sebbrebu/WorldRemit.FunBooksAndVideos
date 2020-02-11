@@ -14,11 +14,11 @@ namespace WorldRemit.FunBooksAndVideos.Api.Services
             _businessRules = businessRules;
         }
 
-        public async Task ProcessOrder(PurchaseOrder order)
+        public async Task ProcessAsync(PurchaseOrder order)
         {
             foreach (var rule in _businessRules)
             {
-                await rule.Apply(order);
+                await rule.ApplyAsync(order);
             }
         }
     }

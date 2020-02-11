@@ -32,12 +32,12 @@ namespace WorldRemit.FunBooksAndVideos.Tests.Unit.Services
             };
 
             //act      
-            await service.ProcessOrder(order);
+            await service.ProcessAsync(order);
 
             //assert
-            rule1.Verify(x => x.Apply(order), Times.Once);
-            rule2.Verify(x => x.Apply(order), Times.Once);
-            rule3.Verify(x => x.Apply(order), Times.Never);
+            rule1.Verify(x => x.ApplyAsync(order), Times.Once);
+            rule2.Verify(x => x.ApplyAsync(order), Times.Once);
+            rule3.Verify(x => x.ApplyAsync(order), Times.Never);
         }
     }
 }

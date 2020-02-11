@@ -5,6 +5,6 @@ namespace WorldRemit.FunBooksAndVideos.Api.BusinessRules
 {
     public interface IBusinessRule
     {
-        Task Apply(PurchaseOrder order);
+        Task ApplyAsync(PurchaseOrder order);
     }
 }

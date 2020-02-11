@@ -39,7 +39,7 @@ namespace WorldRemit.FunBooksAndVideos.Tests.Unit.BusinessRules
             };
 
             //act      
-            await _productShippingSlipRule.Apply(order);
+            await _productShippingSlipRule.ApplyAsync(order);
 
             //assert
             _mockShippingService.Verify(x => x.GenerateShippingSlip(3, new List<Item>() { items[0], items[1] }), Times.Once());
@@ -61,7 +61,7 @@ namespace WorldRemit.FunBooksAndVideos.Tests.Unit.BusinessRules
             };
 
             //act      
-            await _productShippingSlipRule.Apply(order);
+            await _productShippingSlipRule.ApplyAsync(order);
 
             //assert
             _mockShippingService.Verify(x => x.GenerateShippingSlip(It.IsAny<int>(), It.IsAny<IEnumerable<Item>>()), Times.Never());
